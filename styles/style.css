@@ -43,7 +43,7 @@
 .header__logo-description {
     line-height: 100%;
     font-size: clamp(0.875rem, 0.524rem + 0.844vw, 1.4375rem);
-    text-transform: 100%;
+    text-transform: uppercase;
 }
 
 .main {
@@ -83,7 +83,7 @@
     mix-blend-mode: hard-light;
     font-family: var(--accent-font), sans-serif;
     text-transform: uppercase;
-    text-shadow: 1px 0px var(--shadow-color), -1px 0px var(--shadow-color), 0px 1px var(--shadow-color), 0px -1px var(--shadow-color);
+    text-shadow: 1px 0 var(--shadow-color), -1px 0 var(--shadow-color), 0 1px var(--shadow-color), 0 -1px var(--shadow-color);
 }
 
 @supports (text-stroke: 1px var(--shadow-color)) or (-webkit-text-stroke: 1px var(--shadow-color)) {
@@ -144,7 +144,7 @@
     display: flex;
     justify-content: flex-end;
     gap: 12px;
-    padding: 25px 25px 25px 0px;
+    padding: 25px 25px 25px 0;
 }
 
 .card__icon-button {
@@ -220,16 +220,8 @@
     background-color: var(--theme-color);
     opacity: 0.75;
 }
-/*
+
 .footer-popup__content {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 20px
-}
-*/
-.footer-popup__content {
-    /*  inline-size: calc((293/1440) * 100dvw); */
     display: flex;
     align-items: center;
     gap: 20px;
@@ -300,7 +292,7 @@
     }
 
     .footer__button-content {
-        white-space: nowrap; /*Свойство не допускает перенос текста - может помочь а решении задачи связанной с dialog в desktop*/
+        white-space: nowrap;
     }
 
     .footer-popup[open] {
@@ -358,7 +350,7 @@
 .footer__button:focus,
 .footer-popup__button--close:focus {
     outline: none;
-    box-shadow: 2px 2px 0px var(--theme-color);
+    box-shadow: 2px 2px 0 var(--theme-color);
 }
 
 .card__icon-button:focus {
